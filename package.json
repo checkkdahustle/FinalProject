@@ -1,0 +1,26 @@
+{
+  "name": "finalproject",
+  "version": "0.0.1",
+  "description": "Advertisment Hub thats free to use, but upgraded users can change there location to view stuff going on in other places and upload there own events.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/checkkdahustle/FinalProject.git"
+  },
+  "keywords": [
+    "Advertisment",
+    "Hub",
+    "Checkk",
+    "This",
+    "Ad"
+  ],
+  "author": "Clay C. Cyprien (checkkdahustle)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/checkkdahustle/FinalProject/issues"
+  },
+  "homepage": "https://github.com/checkkdahustle/FinalProject#readme"
+}
