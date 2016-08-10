@@ -12,3 +12,6 @@ var mongodb = require('mongodb');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/adhubapp');
 var db = mongoose.connection;
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
