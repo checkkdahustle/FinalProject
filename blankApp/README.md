@@ -1,5 +1,6 @@
 #The Plug App
-This project is being built in Ionic using Angular, Javascript, Html,and SCSS.
+This project is being built in Ionic using Angular, Javascript, Html, SCSS, and Firebase.
+(note to self: remove mongo passport from this project)
 
 Ionic App Base
 =====================
