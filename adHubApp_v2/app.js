@@ -15,3 +15,72 @@ var db = mongoose.connection;
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+
+
+// App Init
+var app = express();
+
+// View Engine
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', exphbs({defaultLayout:'layout'}));
+app.set('view engine', 'handlebars');
+
+// BodyParser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+// Set public Folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Express session
+app.use(session({
+	secret: 'checkkdahustle',
+	saveUninitialized: true,
+	resave: true
+}));
+
+// Passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+// Express validator
+app.use(expressValidator({
+	errorFormatter: function(parma, msg, value) {
+		var namespace = param.split('.'),
+		root = namespace.shift(),
+		formParam = root;
+
+		while (namespace.length) {
+			formParam += '[' + namespace.shift() + ']';
+		}
+		reture{
+			param: formParam,
+			msg: msg,
+			value: value
+		};
+	}
+}));
+
+// connect flash
+app.use(flash());
+
+// Global Vars
+app.use(function (req, res, next) {
+	res.locals.good_msg = req.flash('good_msg');
+	res.locals.error_msg = req.flash('error_msg');
+	res.locals.error = req.flash('error');
+	next();
+
+});
+
+app.use('/', routes);
+app.use('/users', users);
+
+
+// Set port
+app.set('port', (process.env.PORT || 1804));
+app.listen(app.get('port'), function(){
+	console.log('Sever is on port' + app.get('port'));
+});
