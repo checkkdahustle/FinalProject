@@ -10,4 +10,5 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongodb = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/')
+mongoose.connect('mongodb://localhost/adhubapp');
+var db = mongoose.connection;
