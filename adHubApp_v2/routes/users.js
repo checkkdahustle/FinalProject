@@ -83,6 +83,17 @@ passport.use(new LocalStrategy(
     	});
   }));
 
+// middleware - sessions
+	passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.getUserById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
 app.post('/login',
   passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login', failureFlash:true}),
   function(req, res) {
