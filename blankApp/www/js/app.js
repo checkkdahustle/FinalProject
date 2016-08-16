@@ -22,5 +22,37 @@ angular.module('starter', ['ionic'])
     }
   });
 
-  
+
+})
+.config(function($stateProvider, $urlRouteProvider) {
+  $stateProvider
+    .state('tabs', {
+      url: '/tabs',
+      abstract: true,
+      template: 'template/tabs.html'
+    })
+    .state('tabs', {
+      url: '/tabs',
+      views: {
+        'Featured': {
+          templateUrl: 'view/main.html',
+          controller: 'featCtrl'
+        },
+        'concerts': {
+          templateUrl: 'view/concerts.html',
+          controller: 'concertsCtrl'
+        }
+      }
+      template: 'template/list.html',
+      controller: 'ListController'
+    })
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBYULsN3R1Q1DMQWG7nrqtWHyICC_u9Yh4",
+    authDomain: "blankapp-e1c82.firebaseapp.com",
+    databaseURL: "https://blankapp-e1c82.firebaseio.com",
+    storageBucket: "blankapp-e1c82.appspot.com",
+  };
+  firebase.initializeApp(config);
 })
