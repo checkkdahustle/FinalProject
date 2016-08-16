@@ -10,12 +10,6 @@
 
 var fs = require('fs');
 var path = require('path');
-var passport = require('passport');
-var localStrategy = require('passport-local').Strategy;
-var mongodb = require('mongodb');
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/theplugapp');
-var db = mongoose.connection;
 
 var rootdir = process.argv[2];
 
@@ -71,9 +65,6 @@ function findClassAttr(bodyTag) {
   }catch(e){}
 }
 
-// Passport
-app.use(passport.initialize());
-app.use(passport.session());
 
 if (rootdir) {
 
