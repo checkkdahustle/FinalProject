@@ -51,7 +51,7 @@
       <ion-list
         show-delete=" data.showDelete"
         show-reorder="data.showReorder">
-        <ion-item
+        <ion-item ng-class="{'star': item.star}"
           ng-repeat="item in artists | filter: query"
           class="item-thumbnail-left item-icon-right item-text-wrap">
           <img
