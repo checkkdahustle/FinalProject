@@ -53,7 +53,7 @@
         show-reorder="data.showReorder">
         <ion-item
           ng-repeat="item in artists | filter: query"
-          class="item-thumbnail-left item-text-wrap">
+          class="item-thumbnail-left item-icon-right item-text-wrap">
           <img
             src="img/{{item.shortname}}_tn.jpg"
             alt="{{ item.name }} flyer" />
@@ -71,10 +71,11 @@
             ng-click="toggleStar(item)"
             ng-show="item.star">
           </button>
-          <ion-option-button class="button-dark"
-              ng-click="toggleStar(item)">
-              <i class="icon ion-star"></i>
-            </ion-option-button>
+          <ion-option-button
+            class="button-dark"
+            ng-click="toggleStar(item)">
+            <i class="icon ion-star"></i>
+          </ion-option-button>
           <ion-delete-button
             class="ion-minus-circled"
             ng-click="onItemDelete(item)">
