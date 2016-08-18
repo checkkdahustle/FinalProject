@@ -26,6 +26,11 @@ angular.module('starter', ['ionic'])
   $http.get('js/data.json').success(function(data) {
     console.log(data);
       $scope.artists = data;
+
+      $scope.onItemDelete = function(item) {
+        $scope.artists.splice($scope.artists.indexOf(item), 1);
+      }
+
       $scope.moveItem = function (item, fromIndex, toIndex) {
         $scope.artists.splice(fromIndex, 1);
         $scope.artists.splice(toIndex, 0, item);
