@@ -24,6 +24,7 @@
 <body ng-app="starter">
 
   <ion-pane ng-controller="ListController">
+    <!-- Nav -->
     <ion-header-bar class="bar-dark">
       <button
         class="button button-icon ion-minus-circled"
@@ -38,6 +39,7 @@
       </button>
     </ion-header-bar>
 
+    <!-- Search -->
     <div class="bar bar-subheader item-input-inset bar-light">
       <label class="item item-input-wrapper">
         <i class="icon ion-search placeholder-icon"></i>
@@ -49,17 +51,24 @@
       <ion-list
         show-delete=" data.showDelete"
         show-reorder="data.showReorder">
-        <ion-item ng-repeat="item in artists | filter: query"
+        <ion-item
+          ng-repeat="item in artists | filter: query"
           class="item-thumbnail-left item-text-wrap">
-          <img src="img/{{item.shortname}}_tn.jpg" alt="{{ item.name }} flyer" />
-          <h2>{{item.name}}</h2>
-          <h3>{{item.reknown}}</h3>
+          <img
+            src="img/{{item.shortname}}_tn.jpg"
+            alt="{{ item.name }} flyer" />
+          <h2>
+            {{item.name}}
+          </h2>
+          <h3>
+            {{item.reknown}}
+          </h3>
           <p>
             {{item.bio | limitTo: 100}}{{item.bio.length > 150 ? '&hellip;' : ''}}
           </p>
           <ion-delete-button
             class="ion-minus-circled"
-            ng-click="inItemDelete(item)">
+            ng-click="onItemDelete(item)">
           </ion-delete-button>
           <ion-reorder-button
             class="ion-navicon"
