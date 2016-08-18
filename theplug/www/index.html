@@ -55,7 +55,7 @@
           ng-repeat="item in artists | filter: query"
           class="item-thumbnail-left item-icon-right item-text-wrap">
           <img
-            src="img/{{item.shortname}}_tn.jpg"
+            ng-src="img/{{item.shortname}}_tn.jpg"
             alt="{{ item.name }} flyer" />
           <h2>
             {{item.name}}
