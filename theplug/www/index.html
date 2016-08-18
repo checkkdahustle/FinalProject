@@ -46,7 +46,9 @@
     </div>
 
     <ion-content class="has-subheader">
-      <ion-list show-reorder="data.showReorder">
+      <ion-list
+        show-delete=" data.showDelete"
+        show-reorder="data.showReorder">
         <ion-item ng-repeat="item in artists | filter: query"
           class="item-thumbnail-left item-text-wrap">
           <img src="img/{{item.shortname}}_tn.jpg" alt="{{ item.name }} flyer" />
@@ -55,12 +57,17 @@
           <p>
             {{item.bio | limitTo: 100}}{{item.bio.length > 150 ? '&hellip;' : ''}}
           </p>
-      <ion-reorder-button class="ion-navicon"
-        on-reorder="moveItem(item, $fromIndex, $toIndex)">
-      </ion-reorder-button>
-    </ion-item>
-  </ion-list>
-</ion-content>
-</ion-pane>
+          <ion-delete-button
+            class="ion-minus-circled"
+            ng-click="inItemDelete(item)">
+          </ion-delete-button>
+          <ion-reorder-button
+            class="ion-navicon"
+            on-reorder="moveItem(item, $fromIndex, $toIndex)">
+          </ion-reorder-button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-pane>
 </body>
 </html>
