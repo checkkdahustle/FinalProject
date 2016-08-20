@@ -22,23 +22,24 @@ angular.module('starter', ['ionic'])
     }
   });
 })
-.config(function ($stateProvider, $urlRouteProvider) {
+.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('tabs', {
-      url: 'tab',
+      url: '/tab',
       abstract: true,
       templateUrl: 'templates/tabs.html'
   })
   .state('tabs.list', {
     url: '/list',
     views: {
-      'list-tabs': {
+      'list-tab': {
         templateUrl: 'templates/list.html',
         controller: 'ListController'
       }
     }
+  })
+$urlRouterProvider.otherwise('/tab/list');
 })
-$urlRouteProvider.otherwise('/tab/list');
 
 .controller('ListController', ['$scope', '$http', function($scope, $http) {
   $http.get('js/data.json').success(function(data) {
