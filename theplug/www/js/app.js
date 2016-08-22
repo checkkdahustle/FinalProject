@@ -29,6 +29,16 @@ angular.module('starter', ['ionic'])
       abstract: true,
       templateUrl: 'templates/tabs.html'
   })
+
+  .state('tabs.home', {
+    url: '/home',
+    views: {
+      'home-tab' : {
+        templateUrl: 'templates/home.html'
+      }
+    }
+  })
+
   .state('tabs.list', {
     url: '/list',
     views: {
@@ -38,7 +48,7 @@ angular.module('starter', ['ionic'])
       }
     }
   })
-$urlRouterProvider.otherwise('/tab/list');
+$urlRouterProvider.otherwise('/tab/home');
 })
 
 .controller('ListController', ['$scope', '$http', function($scope, $http) {
