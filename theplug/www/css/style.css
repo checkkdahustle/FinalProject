@@ -4,7 +4,7 @@
 }
 
 .splash {
-  background: url(../img/skyline.jpg) no-repeat center center fixed;
+  background: url(../img/concerts-audience.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,4 +17,8 @@
   margin: 0 auto;
   margin-top: 20px;
   text-align: center;
+}
+
+.bird{
+	width: 50%;
 }
