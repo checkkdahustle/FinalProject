@@ -63,7 +63,8 @@ angular.module('starter', ['ionic'])
     url: '/special',
     views: {
       'special-tab' : {
-        templateUrl: 'templates/specials.html'
+        templateUrl: 'templates/specials.html',
+        controller: 'ListController'
       }
     }
   })
@@ -74,6 +75,7 @@ $urlRouterProvider.otherwise('/tab/home');
   $http.get('js/data.json').success(function(data) {
     console.log(data);
       $scope.artists = data;
+      $scope.concerts = data;
       $scope.whichconcert = $state.params.cId;
 
       $scope.onItemDelete = function(item) {
