@@ -7,7 +7,7 @@ angular.module('starter', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    if(ios.cordova && ios.cordova.plugins.Keyboard) {
+    if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -17,7 +17,7 @@ angular.module('starter', ['ionic'])
       // a much nicer keyboard experience.
       cordova.plugins.Keyboard.disableScroll(true);
     }
-    if(ios.StatusBar) {
+    if(window.StatusBar) {
       StatusBar.styleDefault();
     }
   });
@@ -48,13 +48,33 @@ angular.module('starter', ['ionic'])
       }
     }
   })
+
+  .state('tabs.detail', {
+    url: '/list/:cId',
+    views: {
+      'list-tab' : {
+        templateUrl: 'templates/detail.html',
+        controller: 'ListController'
+      }
+    }
+  })
+
+  .state('tabs.special', {
+    url: '/special',
+    views: {
+      'special-tab' : {
+        templateUrl: 'templates/specials.html'
+      }
+    }
+  })
 $urlRouterProvider.otherwise('/tab/home');
 })
 
-.controller('ListController', ['$scope', '$http', function($scope, $http) {
+.controller('ListController', ['$scope', '$http', '$state', function($scope, $http, $state) {
   $http.get('js/data.json').success(function(data) {
     console.log(data);
       $scope.artists = data;
+      $scope.whichconcert = $state.params.cId;
 
       $scope.onItemDelete = function(item) {
         $scope.artists.splice($scope.artists.indexOf(item), 1);
