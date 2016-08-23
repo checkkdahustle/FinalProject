@@ -33,7 +33,7 @@
         show-delete=" data.showDelete"
         show-reorder="data.showReorder">
         <ion-item ng-class="{'star': item.star}"
-          ng-repeat="item in artists | filter: query"
+          ng-repeat="item in concerts | filter: query"
           class="item-thumbnail-left item-icon-right item-text-wrap" href="#/tab/list/{{item.shortname}}">
           <img
             ng-src="img/{{item.shortname}}_tn.jpg"
