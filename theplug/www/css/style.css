@@ -22,3 +22,8 @@
 .bird{
 	width: 50%;
 }
+
+pre {
+	background-color: #ccc;
+	padding: 10px;
+}
