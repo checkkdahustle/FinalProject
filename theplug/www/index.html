@@ -14,12 +14,23 @@
 
 <!-- ionic/angularjs js -->
 <script src="lib/ionic/js/ionic.bundle.js"></script>
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
 
 <!-- cordova script (this will be a 404 during development) -->
 <script src="cordova.js"></script>
 
 <!-- your app's js -->
 <script src="js/app.js"></script>
+<script src="js/controllers/signInCtrl.js"></script>
+<script src="js/controllers/FeaturedCtrl.js"></script>
+<script src="js/controllers/ConcertsCtrl.js"></script>
+<script src="js/controllers/FavoritesCtrl.js"></script>
+<script src="js/services/AuthSvc.js"></script>
+
 </head>
 <body ng-app="starter">
   <ion-nav-bar class="bar-dark">
