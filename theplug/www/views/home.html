@@ -1,0 +1,21 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="splash padding">
+    <div class="branding">
+      <img src="img/logo.png" class="bird" alt="The Plug's View Logo">
+
+      <div class="tagline">&#174 The Plug's View App </div>
+      <button ng-click="loginWithFacebook()">Sign into Facebook</button>
+
+      <h2> {{currentUser.email}}</h2>
+      <h2> {{currentUser.displayName}} </h2>
+      <img ng-src="{{currentUser.photoURL}}" alt="" />
+
+
+      <p>Join the creative <a href="https://www.twitter.com/checkkdahustle">CheckkDaHustle</a> and over 200 brilliant minds from Full Sail graduates around world.</p>
+			<p>&copy2016</p>
+		</div>
+    <pre>
+      {{ currentUser | json }}
+    </pre>
+  </ion-content>
+</ion-view>
