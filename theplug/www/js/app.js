@@ -3,9 +3,17 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic', 'firebase'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope) {
+  $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
+    // We can catch the error thrown when the $requireSignIn promise is rejected
+    // and redirect the user back to the home page
+    if (error === "AUTH_REQUIRED") {
+      $state.go("tabs.signIn");
+    }
+  });
+
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -22,80 +30,87 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+// Config Routes
 .config(function ($stateProvider, $urlRouterProvider) {
+  var config = {
+    apiKey: "AIzaSyBSge6gGPF-JOyqq70FJLFBaoKNA6V5glo",
+    authDomain: "the-plugs-view.firebaseapp.com",
+    databaseURL: "https://the-plugs-view.firebaseio.com",
+    storageBucket: "the-plugs-view.appspot.com",
+  };
+  firebase.initializeApp(config);
+
   $stateProvider
     .state('tabs', {
       url: '/tab',
       abstract: true,
-      templateUrl: 'templates/tabs.html'
+      templateUrl: 'views/tabs.html'
   })
-
-  .state('tabs.home', {
-    url: '/home',
+  .state('tabs.signIn', {
+    url: '/signIn',
     views: {
-      'home-tab' : {
-        templateUrl: 'templates/home.html'
+      'signIn-tab' : {
+        templateUrl: 'views/home.html',
+        controller: 'SignInController'
       }
     }
   })
 
-  .state('tabs.list', {
-    url: '/list',
+  .state('tabs.features', {
+    url: '/features',
     views: {
-      'list-tab': {
-        templateUrl: 'templates/list.html',
-        controller: 'ListController'
+      'features-tab' : {
+        templateUrl: 'views/featuredView.html',
+        controller: 'FeaturedController',
+        resolve: {
+          "currentAuth": ["Auth", function(Auth) {
+            return Auth.$requireSignIn();
+          }]
+        }
       }
     }
   })
-
-  .state('tabs.detail', {
-    url: '/list/:cId',
+  .state('tabs.detailFeat', {
+    url: '/features/:cId',
     views: {
-      'list-tab' : {
-        templateUrl: 'templates/detail.html',
-        controller: 'ListController'
+      'features-tab' : {
+        templateUrl: 'views/detail.html',
+        controller: 'FeaturedController',
+        resolve: {
+          "currentAuth": ["Auth", function(Auth) {
+            return Auth.$requireSignIn();
+          }]
+        }
       }
     }
   })
-
+  .state('tabs.concerts', {
+    url: '/concerts',
+    views: {
+      'concerts-tab': {
+        templateUrl: 'views/concertView.html',
+        controller: 'ConcertsController'
+      }
+    }
+  })
+  .state('tabs.detailConcert', {
+    url: '/concerts/:cId',
+    views: {
+      'concerts-tab' : {
+        templateUrl: 'views/detail.html',
+        controller: 'ConcertsController'
+      }
+    }
+  })
   .state('tabs.special', {
     url: '/special',
     views: {
       'special-tab' : {
         templateUrl: 'templates/specials.html',
-        controller: 'ListController'
+        controller: 'FavoritesController'
       }
     }
   })
-$urlRouterProvider.otherwise('/tab/home');
+$urlRouterProvider.otherwise('/tab/features');
 })
-
-.controller('ListController', ['$scope', '$http', '$state', function($scope, $http, $state) {
-  $http.get('js/data.json').success(function(data) {
-    console.log(data);
-      $scope.artists = data;
-      $scope.concerts = data;
-      $scope.whichconcert = $state.params.cId;
-
-      $scope.onItemDelete = function(item) {
-        $scope.artists.splice($scope.artists.indexOf(item), 1);
-      }
-
-      $scope.doRefresh =function() {
-      $http.get('js/data.json').success(function(data) {
-          $scope.artists = data;
-          $scope.$broadcast('scroll.refreshComplete');
-        });
-      }
-
-      $scope.toggleStar = function(item) {
-        item.star = !item.star;
-      }
-
-      $scope.moveItem = function (item, fromIndex, toIndex) {
-        $scope.artists.splice(fromIndex, 1);
-        $scope.artists.splice(toIndex, 0, item);
-      }
-  });
-}]);
