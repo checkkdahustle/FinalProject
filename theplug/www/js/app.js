@@ -86,15 +86,15 @@ angular.module('theplugsview', ['ionic', 'firebase'])
       }
     }
   })
-  // .state('tabs.concerts', {
-  //   url: '/concerts',
-  //   views: {
-  //     'concerts-tab': {
-  //       templateUrl: 'views/concertView.html',
-  //       controller: 'ConcertsController'
-  //     }
-  //   }
-  // })
+  .state('tabs.concerts', {
+    url: '/concerts',
+    views: {
+      'concerts-tab': {
+        templateUrl: 'views/concertView.html',
+        controller: 'ConcertsController'
+      }
+    }
+  })
   // .state('tabs.detailConcert', {
   //   url: '/concerts/:cId',
   //   views: {
