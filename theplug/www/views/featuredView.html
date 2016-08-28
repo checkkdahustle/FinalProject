@@ -1,22 +1,14 @@
-<ion-view view-title="Featured Concerts">
-
-  <ion-nav-buttons side="primary">
-    <button
-      class="button button-icon ion-minus-circled"
-      ng-click="data.showDelete = !data.showDelete; data.showReorder = false;">
-    </button>
-  </ion-nav-buttons>
-
-  <ion-nav-buttons side="secondary">
-    <button
-      class="button button-icon ion-navicon"
-      ng-click="data.showReorder = !data.showReorder; data.showDelete = false;">
-    </button>
-  </ion-nav-buttons>
-
-  <h2> {{currentUser.displayName}} </h2>
-  <img ng-src="{{currentUser.photoURL}}" alt="" />
-
+<ion-header-bar class="bar-positive">
+  <button
+    class="button button-icon ion-minus-circled"
+    ng-click="data.showDelete = !data.showDelete; data.showReorder = false;">
+  </button>
+  <h2 class="title">FeaturedView List</h2>
+  <button
+    class="button button-icon ion-navicon"
+    ng-click="data.showReorder = !data.showReorder; data.showDelete = false;">
+  </button>
+</ion-header-bar>
 <div class="bar bar-subheader
   item-input-inset bar-light">
   <label class="item-input-wrapper">
@@ -44,19 +36,15 @@
       <button class="button button-clear icon ion-star button-assertive"
         ng-click="toggleStar(item)"
         ng-show="item.star"></button>
-<!-- Favorite -->
       <ion-option-button class="button-dark"
         ng-click="toggleStar(item)">
         <i class="icon ion-star"></i>
       </ion-option-button>
-<!-- Delete -->
       <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
       </ion-delete-button>
-<!-- ReOrder -->
       <ion-reorder-button class="ion-navicon"
         on-reorder="moveItem(item, $fromIndex, $toIndex)">
       </ion-reorder-button>
     </ion-item>
   </ion-list>
 </ion-content>
-</ion-view>
