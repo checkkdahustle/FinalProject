@@ -5,7 +5,7 @@ angular.module('theplugsview')
 
   $http.get('js/data.json').success(function(data) {
     // console.log(data);
-      $scope.concerts = data;
+      $scope.concerts = data.concerts;
       $scope.whichconcert = $state.params.cId;
       $scope.data = {
         showDelete: false,
