@@ -6,7 +6,7 @@
   <ion-content>
     <ion-list class="list-inset">
       <ion-item class="item-text-wrap"
-        ng-repeat="item in artists | filter: { shortname: whichconcert }">
+        ng-repeat="item in concerts | filter: { shortname: whichconcert }">
           <img ng-src="img/{{item.shortname}}_tn.jpg"
             alt="{{ item.name }} Photo">
           <h2>{{ item.name }}</h2>
