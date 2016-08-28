@@ -1,5 +1,5 @@
 // Authentication for checking routes
-angular.module('starter').factory("Auth", ["$firebaseAuth",
+angular.module('theplugsview').factory("Auth", ["$firebaseAuth",
   function($firebaseAuth) {
     return $firebaseAuth();
   }

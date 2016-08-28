@@ -1,4 +1,4 @@
-angular.module('starter')
+angular.module('theplugsview')
 .controller('ConcertsController', ['$scope', '$http', '$state', function($scope, $http, $state) {
   console.log("Concerts View")
 

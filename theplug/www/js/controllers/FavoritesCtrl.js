@@ -1,4 +1,4 @@
-angular.module('starter')
+angular.module('theplugsview')
 .controller('FavoritesController', ['$scope', '$http', '$state', function($scope, $http, $state) {
 
 	console.log("Favorites View")

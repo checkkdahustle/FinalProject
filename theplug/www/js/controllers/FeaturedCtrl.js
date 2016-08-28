@@ -1,4 +1,4 @@
-angular.module('starter')
+angular.module('theplugsview')
 .controller('FeaturedController', ['$scope', '$http', '$state', 'currentAuth', function($scope, $http, $state, currentAuth) {
   console.log("sup USER ", currentAuth);
   $scope.currentUser = currentAuth;

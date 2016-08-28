@@ -1,4 +1,4 @@
-angular.module('starter').controller('SignInController', ['$scope', '$rootScope', '$http', '$state', '$firebaseAuth', function($scope, $rootScope, $http, $state, $firebaseAuth) {
+angular.module('theplugsview').controller('SignInController', ['$scope', '$rootScope', '$http', '$state', '$firebaseAuth', function($scope, $rootScope, $http, $state, $firebaseAuth) {
   console.log("Sign In View");
   $scope.authObj = $firebaseAuth();
 
