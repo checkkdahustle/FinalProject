@@ -15,12 +15,21 @@
   width: 50%;
   max-width: 200px;
   margin: 0 auto;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
+	position: relative;
+	bottom: 60px;
   text-align: center;
 }
 
-.bird{
-	width: 50%;
+.tagline{
+
+}
+
+.uz_logo{
+	width: 180%;
+	position: relative;
+	top: 40px;
+	right: 85px;
 }
 
 pre {
