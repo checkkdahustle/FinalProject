@@ -33,6 +33,7 @@ angular.module('starter', ['ionic', 'firebase'])
 
 // Config Routes
 .config(function ($stateProvider, $urlRouterProvider) {
+  // $ionicConfigProvider.views.maxCache(10);
   var config = {
     apiKey: "AIzaSyBSge6gGPF-JOyqq70FJLFBaoKNA6V5glo",
     authDomain: "the-plugs-view.firebaseapp.com",
@@ -45,7 +46,7 @@ angular.module('starter', ['ionic', 'firebase'])
     .state('tabs', {
       url: '/tab',
       abstract: true,
-      templateUrl: 'views/tabs.html'
+      templateUrl: 'views/templates/tabs.html'
   })
   .state('tabs.signIn', {
     url: '/signIn',
@@ -75,7 +76,7 @@ angular.module('starter', ['ionic', 'firebase'])
     url: '/features/:cId',
     views: {
       'features-tab' : {
-        templateUrl: 'views/detail.html',
+        templateUrl: 'views/templates/detail.html',
         controller: 'FeaturedController',
         resolve: {
           "currentAuth": ["Auth", function(Auth) {
@@ -85,32 +86,32 @@ angular.module('starter', ['ionic', 'firebase'])
       }
     }
   })
-  .state('tabs.concerts', {
-    url: '/concerts',
-    views: {
-      'concerts-tab': {
-        templateUrl: 'views/concertView.html',
-        controller: 'ConcertsController'
-      }
-    }
-  })
-  .state('tabs.detailConcert', {
-    url: '/concerts/:cId',
-    views: {
-      'concerts-tab' : {
-        templateUrl: 'views/detail.html',
-        controller: 'ConcertsController'
-      }
-    }
-  })
-  .state('tabs.special', {
-    url: '/special',
-    views: {
-      'special-tab' : {
-        templateUrl: 'templates/specials.html',
-        controller: 'FavoritesController'
-      }
-    }
-  })
+  // .state('tabs.concerts', {
+  //   url: '/concerts',
+  //   views: {
+  //     'concerts-tab': {
+  //       templateUrl: 'views/concertView.html',
+  //       controller: 'ConcertsController'
+  //     }
+  //   }
+  // })
+  // .state('tabs.detailConcert', {
+  //   url: '/concerts/:cId',
+  //   views: {
+  //     'concerts-tab' : {
+  //       templateUrl: 'views/detail.html',
+  //       controller: 'ConcertsController'
+  //     }
+  //   }
+  // })
+  // .state('tabs.special', {
+  //   url: '/special',
+  //   views: {
+  //     'special-tab' : {
+  //       templateUrl: 'views/templates/specials.html',
+  //       controller: 'FavoritesController'
+  //     }
+  //   }
+  // })
 $urlRouterProvider.otherwise('/tab/features');
 })
