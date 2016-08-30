@@ -1,18 +1,25 @@
 angular.module('theplugsview')
 .controller('ConcertsController', ['$scope', '$http', '$state', function($scope, $http, $state) {
-  console.log("Concerts View")
+
+  console.log("Concert View");
+  // $scope.currentUser = currentAuth;
 
   $http.get('js/data.json').success(function(data) {
     // console.log(data);
-      $scope.calendar = data.calendar;
+      $scope.concerts = data.concerts;
+      $scope.whichconcert = $state.params.cId;
+      $scope.data = {
+        showDelete: false,
+        showReorder: false
+      };
 
-      $scope.onItemDelete = function(dayIndex, item) {
-        $scope.calendar[dayIndex].schedule.splice($scope.calendar[dayIndex].schedule.indexOf(item), 1);
+      $scope.onItemDelete = function(item) {
+        $scope.concerts.splice($scope.concerts.indexOf(item), 1);
       }
 
-      $scope.doRefresh = function() {
+      $scope.doRefresh =function() {
       $http.get('js/data.json').success(function(data) {
-          $scope.calendar = data.calendar;
+          $scope.concerts = data;
           $scope.$broadcast('scroll.refreshComplete');
         });
       }
@@ -21,5 +28,9 @@ angular.module('theplugsview')
         item.star = !item.star;
       }
 
+      $scope.moveItem = function (item, fromIndex, toIndex) {
+        $scope.concerts.splice(fromIndex, 1);
+        $scope.concerts.splice(toIndex, 0, item);
+      };
   });
 }]);
