@@ -1,4 +1,4 @@
-#The Plug App
+#The Plugs View App
 This project is being built in Ionic using Angular, Javascript, Html, CSS, and Firebase.
 
 
