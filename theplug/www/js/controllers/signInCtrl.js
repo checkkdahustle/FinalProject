@@ -3,9 +3,9 @@ angular.module('theplugsview').controller('SignInController', ['$scope', '$rootS
   $scope.authObj = $firebaseAuth();
 
   $scope.loginWithFacebook = function () {
-    console.log("HOLLA!")
+    // console.log("HOLLA!")
     $scope.authObj.$signInWithPopup("facebook").then(function(result) {
-      console.log("Signed in as:", result.user);
+      // console.log("Signed in as:", result.user);
       $rootScope.currentUser = result.user;
     }).catch(function(error) {
       console.error("Authentication failed:", error);
