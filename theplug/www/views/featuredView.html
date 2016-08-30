@@ -1,4 +1,4 @@
-<ion-view view-title="Featured List">
+<ion-view view-title="Features List">
 
   <ion-nav-buttons side="primary">
     <button
@@ -32,7 +32,7 @@
       <ion-item ng-class="{'star': item.star}"
       ng-repeat='item in concerts | filter: query'
       class="item-thumbnail-left item-icon-right
-        item-text-wrap" href="#/tab/features/{{item.shortname}}">
+        item-text-wrap" href="#/tab/home/{{item.shortname}}">
         <img ng-src="img/{{item.shortname}}_tn.jpg"
           alt="{{ item.name }} Photo">
         <h2>{{item.name}}</h2>
