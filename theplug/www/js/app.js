@@ -10,7 +10,7 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     // We can catch the error thrown when the $requireSignIn promise is rejected
     // and redirect the user back to the home page
     if (error === "AUTH_REQUIRED") {
-      $state.go("tabs.signIn");
+      $state.go("tabs.home");
     }
   });
 
@@ -33,7 +33,7 @@ angular.module('theplugsview', ['ionic', 'firebase'])
 
 // Config Routes
 .config(function ($stateProvider, $urlRouterProvider) {
-  // $ionicConfigProvider.views.maxCache(10);
+  // firebaseapp config;
   var config = {
     apiKey: "AIzaSyBSge6gGPF-JOyqq70FJLFBaoKNA6V5glo",
     authDomain: "the-plugs-view.firebaseapp.com",
@@ -48,50 +48,61 @@ angular.module('theplugsview', ['ionic', 'firebase'])
       abstract: true,
       templateUrl: 'views/templates/tabs.html'
   })
-  .state('tabs.signIn', {
-    url: '/signIn',
+  // Features home tab state route
+  .state('tabs.home', {
+    url: '/home',
     views: {
-      'signIn-tab' : {
-        templateUrl: 'views/home.html',
-        controller: 'SignInController'
-      }
-    }
-  })
-
-  .state('tabs.features', {
-    url: '/features',
-    views: {
-      'features-tab' : {
+      'home-tab' : {
         templateUrl: 'views/featuredView.html',
-        controller: 'FeaturedController',
-        resolve: {
-          "currentAuth": ["Auth", function(Auth) {
-            return Auth.$requireSignIn();
-          }]
-        }
+        controller: 'FeaturedController'
       }
     }
   })
-  .state('tabs.detailFeat', {
-    url: '/features/:cId',
+  // Features Details home tab state route
+  .state('tabs.home-detailsFeatures', {
+    url: '/home/:cId',
     views: {
-      'features-tab' : {
+      'home-tab' : {
         templateUrl: 'views/templates/detail.html',
         controller: 'FeaturedController',
-        resolve: {
-          "currentAuth": ["Auth", function(Auth) {
-            return Auth.$requireSignIn();
-          }]
-        }
       }
     }
   })
+  // Concert tab state route
   .state('tabs.concerts', {
     url: '/concerts',
     views: {
-      'concerts-tab': {
+      'concerts-tab' : {
         templateUrl: 'views/concertView.html',
-        controller: 'ConcertsController'
+        controller: 'ConcertsController',
+        // resolve: {
+        //   "currentAuth": ["Auth", function(Auth) {
+        //     return Auth.$requireSignIn();
+        //   }]
+        // }
+      }
+    }
+  })
+  .state('tabs.concerts-details', {
+    url: '/concerts/:cId',
+    views: {
+      'concerts-tab' : {
+        templateUrl: 'views/templates/detail.html',
+        controller: 'ConcertsController',
+        // resolve: {
+        //   "currentAuth": ["Auth", function(Auth) {
+        //     return Auth.$requireSignIn();
+        //   }]
+        // }
+      }
+    }
+  })
+  .state('tabs.calendar', {
+    url: '/calendar',
+    views: {
+      'calendar-tab': {
+        templateUrl: 'views/favoriteView.html',
+        controller: 'FavoritesController'
       }
     }
   })
@@ -113,5 +124,5 @@ angular.module('theplugsview', ['ionic', 'firebase'])
   //     }
   //   }
   // })
-$urlRouterProvider.otherwise('/tab/features');
+$urlRouterProvider.otherwise('/tab/home');
 })
