@@ -1,8 +1,8 @@
 angular.module('theplugsview')
-.controller('ConcertsController', ['$scope', '$http', '$state', function($scope, $http, $state) {
+.controller('ConcertsController', ['$scope', '$http', '$state' ,'currentAuth', function($scope, $http, $state, currentAuth) {
 
   console.log("Concert View");
-  // $scope.currentUser = currentAuth;
+  $scope.currentUser = currentAuth;
 
   $http.get('js/data.json').success(function(data) {
     // console.log(data);
