@@ -5,12 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('theplugsview', ['ionic', 'firebase'])
 
-.run(function($ionicPlatform, $rootScope) {
+.run(function($ionicPlatform, $rootScope, $state) {
   $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
     // We can catch the error thrown when the $requireSignIn promise is rejected
     // and redirect the user back to the home page
     if (error === "AUTH_REQUIRED") {
-      $state.go("tabs.home");
+      $state.go("tabs.signIn");
     }
   });
 
@@ -54,7 +54,12 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     views: {
       'home-tab' : {
         templateUrl: 'views/featuredView.html',
-        controller: 'FeaturedController'
+        controller: 'FeaturedController',
+        resolve: {
+          "currentAuth": ["Auth", function(Auth) {
+            return Auth.$requireSignIn();
+          }]
+        }
       }
     }
   })
@@ -65,6 +70,11 @@ angular.module('theplugsview', ['ionic', 'firebase'])
       'home-tab' : {
         templateUrl: 'views/templates/detail.html',
         controller: 'FeaturedController',
+        resolve: {
+          "currentAuth": ["Auth", function(Auth) {
+            return Auth.$requireSignIn();
+          }]
+        }
       }
     }
   })
@@ -75,11 +85,11 @@ angular.module('theplugsview', ['ionic', 'firebase'])
       'concerts-tab' : {
         templateUrl: 'views/concertView.html',
         controller: 'ConcertsController',
-        // resolve: {
-        //   "currentAuth": ["Auth", function(Auth) {
-        //     return Auth.$requireSignIn();
-        //   }]
-        // }
+        resolve: {
+          "currentAuth": ["Auth", function(Auth) {
+            return Auth.$requireSignIn();
+          }]
+        }
       }
     }
   })
@@ -89,11 +99,11 @@ angular.module('theplugsview', ['ionic', 'firebase'])
       'concerts-tab' : {
         templateUrl: 'views/templates/detail.html',
         controller: 'ConcertsController',
-        // resolve: {
-        //   "currentAuth": ["Auth", function(Auth) {
-        //     return Auth.$requireSignIn();
-        //   }]
-        // }
+        resolve: {
+          "currentAuth": ["Auth", function(Auth) {
+            return Auth.$requireSignIn();
+          }]
+        }
       }
     }
   })
@@ -106,15 +116,15 @@ angular.module('theplugsview', ['ionic', 'firebase'])
       }
     }
   })
-  // .state('tabs.detailConcert', {
-  //   url: '/concerts/:cId',
-  //   views: {
-  //     'concerts-tab' : {
-  //       templateUrl: 'views/detail.html',
-  //       controller: 'ConcertsController'
-  //     }
-  //   }
-  // })
+  .state('tabs.signIn', {
+    url: '/signIn',
+    views: {
+      'signIn-tab' : {
+        templateUrl: 'views/home.html',
+        controller: 'SignInController'
+      }
+    }
+  })
   // .state('tabs.special', {
   //   url: '/special',
   //   views: {
