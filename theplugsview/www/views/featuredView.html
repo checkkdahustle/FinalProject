@@ -1,23 +1,29 @@
 <ion-view view-title="Features List">
 
   <ion-nav-buttons side="primary">
-    <button ng-show="currentUser.type == 'auth'"
+<!-- admin user can only view  Delete button -->
+    <button ng-show="currentUser.type == 'admin'"
       class="button button-icon ion-minus-circled"
       ng-click="data.showDelete = !data.showDelete; data.showReorder = false;">
     </button>
   </ion-nav-buttons>
 
+<!-- Display currentUser name and photo from facebook -->
   <ion-nav-buttons side="secondary">
     <p > {{currentUser.displayName}} </p>
-    <img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
-    <!-- <button ng-show="currentUser.type == 'auth'"
+    <img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="profile photo" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
+
+<!-- admin user can only view Reoreder button -->
+    <button ng-show="currentUser.type == 'admin'"
       class="button button-icon ion-navicon"
       ng-click="data.showReorder = !data.showReorder; data.showDelete = false;">
-    </button> -->
+    </button>
 
-    <button ng-hide="currentUser" ng-click="loginWithFacebook()" type="button" name="button">facebook signIn</button>
+<!--facebook signIn - hide button from signed in user -->
+    <button ng-hide="currentUser" ng-click="loginWithFacebook()" type="button" name="button">facebook sign</button>
   </ion-nav-buttons>
 
+<!-- Search bar filtering through concert list  -->
   <div class="bar bar-subheader
     item-input-inset bar-light">
     <label class="item-input-wrapper">
@@ -25,7 +31,8 @@
       <input type="search" ng-model="query" placeholder="Search">
     </label>
   </div>
-<!-- Content View -->
+
+<!-- Content View of concerts list -->
   <ion-content class="has-subheader">
     <ion-refresher
       on-refresh="doRefresh()">
