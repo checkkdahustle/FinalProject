@@ -1,6 +1,6 @@
 angular.module('theplugsview')
-.controller('FeaturedController', ['$scope', '$http', '$state', function($scope, $http, $state) {
-
+.controller('FeaturedController', ['$scope', '$http', '$state', 'currentAuth', function($scope, $http, $state, currentAuth) {
+ $scope.currentUser = currentAuth;
 	console.log("Features View")
   $http.get('js/data.json').success(function(data) {
     console.log("Dummy json info " + data);
