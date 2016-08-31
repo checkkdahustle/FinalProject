@@ -1,16 +1,19 @@
 <ion-view view-title="Concerts List">
 
   <ion-nav-buttons side="primary">
-    <button
+    <button ng-show="currentUser.type == 'auth'"
       class="button button-icon ion-minus-circled"
       ng-click="data.showDelete = !data.showDelete; data.showReorder = false;">
     </button>
   </ion-nav-buttons>
 
   <ion-nav-buttons side="secondary">
+    <p > {{currentUser.displayName}} </p>
+    <img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
+    
     <button
-      class="button button-icon ion-navicon"
-      ng-click="data.showReorder = !data.showReorder; data.showDelete = false;">
+      ng-hide="currentUser" ng-click="loginWithFacebook()" type="button" name="button">
+        facebook signIn
     </button>
   </ion-nav-buttons>
 
