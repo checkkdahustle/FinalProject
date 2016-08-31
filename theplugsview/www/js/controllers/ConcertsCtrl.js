@@ -19,7 +19,7 @@ angular.module('theplugsview')
 
       $scope.doRefresh =function() {
       $http.get('js/data.json').success(function(data) {
-          $scope.concerts = data;
+          $scope.concerts = data.concerts;
           $scope.$broadcast('scroll.refreshComplete');
         });
       }
