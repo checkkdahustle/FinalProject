@@ -33,10 +33,10 @@
   </div>
 
 <!-- Content View of concerts list -->
-  <ion-content class="has-subheader">
+  <ion-content ng-show="currentUser" class="has-subheader">
     <ion-refresher
       on-refresh="doRefresh()">
-    </ion-refresher>
+    </ion-refresher><!-- Refresh page on pull down -->
     <ion-list
       show-delete="data.showDelete"
       show-reorder="data.showReorder">
@@ -64,5 +64,12 @@
         </ion-reorder-button>
       </ion-item>
     </ion-list>
+  </ion-content>
+
+  <ion-content ng-hide="currentUser" class="has-subheader">
+
+    <h1>
+      Click here to Sign In With your Facebook
+    </h1>
   </ion-content>
 </ion-view>
