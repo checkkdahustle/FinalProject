@@ -1,7 +1,10 @@
 angular.module('theplugsview')
-.controller('FeaturedController', ['$scope', '$http', '$state', 'currentAuth', function($scope, $http, $state, currentAuth) {
+.controller('FeaturedController', ['$scope', '$http', '$state', '$firebaseArray', 'currentAuth', function($scope, $http, $state, $firebaseArray, currentAuth) {
+
  $scope.currentUser = currentAuth;
-	console.log("Features View")
+  
+	console.log("Features View");
+
   $http.get('js/data.json').success(function(data) {
     console.log("Dummy json info " + data);
       $scope.artists = data;
