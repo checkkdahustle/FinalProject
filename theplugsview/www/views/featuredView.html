@@ -10,8 +10,16 @@
 
 <!-- Display currentUser name and photo from facebook -->
   <ion-nav-buttons side="secondary">
-    <p > {{currentUser.displayName}} </p>
-    <img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="profile photo" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
+      <ul>
+        <li>
+          <h6 class="displayName"> {{currentUser.displayName}} </h6>
+          <ul class="dropdown">
+            <li><a href="#">Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+      <img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="profile photo" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
+
 
 <!-- admin user can only view Reoreder button -->
     <button ng-show="currentUser.type == 'admin'"
@@ -66,10 +74,17 @@
     </ion-list>
   </ion-content>
 
-  <ion-content ng-hide="currentUser" class="has-subheader">
+  <ion-content ng-hide="currentUser" class="has-subheader padding">
 
-    <h1>
+    <button class="facebook-btn" ng-click="loginWithFacebook()">
       Click here to Sign In With your Facebook
-    </h1>
+    </button>
+    <img class="flyerbeta" src="../img/flyer-beta.png" alt="" />
+
+      <!--facebook signIn - hide button from signed in user -->
+    <button class="facebook-btn" ng-hide="currentUser" ng-click="loginWithFacebook()" type="button" name="button">Log In with Facebook
+    </button>
+
+
   </ion-content>
 </ion-view>
