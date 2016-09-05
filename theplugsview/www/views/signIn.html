@@ -1,0 +1,19 @@
+<ion-view view-title="Sign In">
+  <ion-content>
+
+    <div>
+      <button ng-click="loginWithFacebook()">Sign into Facebook</button>
+      <div>&#174 The Plug's View App </div>
+
+      <h2> {{currentUser.email}}</h2>
+      <h2> {{currentUser.displayName}} </h2>
+      <img ng-src="{{currentUser.photoURL}}" alt="" />
+
+		</div>
+
+    <!-- <pre>
+      {{ currentUser | json }}
+    </pre> -->
+
+  </ion-content>
+</ion-view>
