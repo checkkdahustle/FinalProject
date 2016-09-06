@@ -14,7 +14,7 @@
         <li>
           <h6 class="displayName"> {{currentUser.displayName}} </h6>
           <ul class="dropdown">
-            <li><a href="#">Log out</a></li>
+            <li ng-click="authObj.$signOut()"><a href="#">Log out</a></li>
           </ul>
         </li>
       </ul>
@@ -32,11 +32,11 @@
   </ion-nav-buttons>
 
 <!-- Search bar filtering through concert list  -->
-  <div class="bar bar-subheader
+  <div class="bar bar-subheader 
     item-input-inset bar-light">
     <label class="item-input-wrapper">
       <i class="icon ion-search placeholder-icon"></i>
-      <input type="search" ng-model="query" placeholder="Search">
+      <input type="search"  ng-show="currentUser" ng-model="query" placeholder="Search">
     </label>
   </div>
 
