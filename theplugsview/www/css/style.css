@@ -78,10 +78,12 @@ pre {
   font-weight: 200;
 }
 
+/*Detailed Flyer Images - featuredView and concertView  */
 .detailFlyer{
   max-width: 100%;
 }
 
+/*Profile Photo - featuredView.html */
 .profile-img {
   height: 50px;
   border-radius: 50px;
@@ -90,22 +92,25 @@ pre {
   float: right;
 }
 
+/* facebook buttion - signIn.html */
 .facebook-btn{
   background-color: #5b7dc1;
   color: #fff;
 }
 
+/*Beta Flyer - signIn.html */
 .flyerbeta{
   max-width: 100%;
   /*margin: 0 auto;*/
 }
 
+/*facebook display name - featuredView and concertView */
 .displayName{
   max-width: 110px;
   color: #fff;
 }
 
-/*Drop down*/
+/* Log out Drop down - featuredView and concertView */
 ul{
     padding: 0;
     list-style: none;
