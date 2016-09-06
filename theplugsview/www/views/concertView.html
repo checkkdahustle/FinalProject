@@ -12,7 +12,8 @@
 <ion-nav-buttons side="secondary">
     <ul>
       <li>
-        <h6 class="displayName"> {{currentUser.displayName}} </h6>
+        <h6 class="displayName"> {{currentUser.displayName}}
+        </h6>
         <ul class="dropdown">
           <li ng-click="authObj.$signOut()"><a href="#">Log out</a></li>
         </ul>
@@ -26,9 +27,6 @@
     class="button button-icon ion-navicon"
     ng-click="data.showReorder = !data.showReorder; data.showDelete = false;">
   </button>
-
-<!--facebook signIn - hide button from signed in user -->
-  <button ng-hide="currentUser" ng-click="loginWithFacebook()" type="button" name="button">facebook sign</button>
 </ion-nav-buttons>
 
 <!-- Search bar filtering through concert list  -->
@@ -36,7 +34,7 @@
     item-input-inset bar-light">
     <label class="item-input-wrapper">
       <i class="icon ion-search placeholder-icon"></i>
-      <input type="search" ng-model="query" ng-show="currentUser" placeholder="Search">
+      <input type="search" ng-model="query" placeholder="Search">
     </label>
   </div>
 
@@ -72,19 +70,5 @@
         </ion-reorder-button>
       </ion-item>
     </ion-list>
-  </ion-content>
-
-  <ion-content ng-hide="currentUser" class="has-subheader padding">
-
-    <button class="facebook-btn" ng-click="loginWithFacebook()">
-      Click here to Sign In With your Facebook
-    </button>
-    <img class="flyerbeta" src="../img/flyer-beta.png" alt="" />
-
-      <!--facebook signIn - hide button from signed in user -->
-    <button class="facebook-btn" ng-hide="currentUser" ng-click="loginWithFacebook()" type="button" name="button">Log In with Facebook
-    </button>
-
-
   </ion-content>
 </ion-view>
