@@ -10,7 +10,7 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     // We can catch the error thrown when the $requireSignIn promise is rejected
     // and redirect the user back to the home page
     if (error === "AUTH_REQUIRED") {
-      $state.go("tabs.signIn");
+      $state.go("landing");
     }
   });
 
@@ -116,23 +116,10 @@ angular.module('theplugsview', ['ionic', 'firebase'])
       }
     }
   })
-  .state('tabs.signIn', {
-    url: '/signIn',
-    views: {
-      'signIn-tab' : {
-        templateUrl: 'views/home.html',
-        controller: 'SignInController'
-      }
-    }
+  .state('landing', {
+    url: '/landing',
+    templateUrl: 'views/signIn.html',
+    controller: 'SignInController'
   })
-  // .state('tabs.special', {
-  //   url: '/special',
-  //   views: {
-  //     'special-tab' : {
-  //       templateUrl: 'views/templates/specials.html',
-  //       controller: 'FavoritesController'
-  //     }
-  //   }
-  // })
 $urlRouterProvider.otherwise('/tab/home');
 })
