@@ -1,19 +1,11 @@
 <ion-view view-title="Sign In">
   <ion-content>
-
-    <div>
-      <button ng-click="loginWithFacebook()">Sign into Facebook</button>
-      <div>&#174 The Plug's View App </div>
-
-      <h2> {{currentUser.email}}</h2>
-      <h2> {{currentUser.displayName}} </h2>
-      <img ng-src="{{currentUser.photoURL}}" alt="" />
-
-		</div>
-
-    <!-- <pre>
-      {{ currentUser | json }}
-    </pre> -->
+<!-- Log In with facebook button -->
+    <button class="facebook-btn" ng-click="loginWithFacebook()">
+      Click here to Sign In With your Facebook
+    </button>
+<!-- Landing page Flyer Image  -->
+    <img class="flyerbeta" src="../img/flyer-beta.png" alt="BetaFlyer" />
 
   </ion-content>
 </ion-view>
