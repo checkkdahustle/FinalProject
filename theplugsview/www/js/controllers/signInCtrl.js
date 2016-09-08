@@ -3,6 +3,7 @@ angular.module('theplugsview').controller('SignInController', ['$scope', '$rootS
   console.log("Sign In View");
   $rootScope.authObj = Auth;
 
+  // Auth State Change - User signed in and out. 
   Auth.$onAuthStateChanged(function(user) {
     if(user){
       $rootScope.currentUser = user;
