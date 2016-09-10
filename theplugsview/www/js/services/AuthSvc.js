@@ -7,13 +7,13 @@ angular.module('theplugsview')
 
 
 angular.module('theplugsview')
-.factory("User", ["$firebaseArray",
-  function($firebaseArray) {
+.factory("User", ["$firebaseObject",
+  function($firebaseObject) {
     // create a new service based on $firebaseObject
-    var User = $firebaseObject.$extend({
+    return $firebaseObject.$extend({
       // these methods exist on the prototype, so we can access the data using `this`
       getFullName: function() {
-        return this.currentUser.displayName;
+        return this.first_name + " " + this.last_name;
       }
     });
 
