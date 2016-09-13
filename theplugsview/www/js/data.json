@@ -7,7 +7,7 @@
       "schedule": [
         {
           "time": "9:30-10:30am",
-          "shortname": "LaVonne_LaRue",
+          "shortname": "GRIOT_FEST",
           "artist": "LaVonne L. LaRue",
           "room": "Elizabeth Hall",
           "description": "Watch LaVonne L. LaRue, a Chicago graffiti artist share her love and skill of mural art on Monday's schedule, as she starts the painting of a 20-foot high wall in the Rousseau Room of Hotel Contempo, which will be finished at the end of the conference. Make sure to show up a bit early, as this session will be standing-room only.",
@@ -58,7 +58,7 @@
         {
           "time": "9:30 to 10:30 am",
           "shortname": "Barot_Bellingham",
-          "artist": "Barot Bellingham",
+          "artist": "Jazz in the Gardens Music Festival",
           "room": "Elizabeth Hall",
           "description": "Barot Bellingham's new collection is pieced together from seemingly unrelated individual works of varying topic. From portraits to landscapes to abstract, Barot does it all, and does it all well. The only unifying factor is the excellence in form, technique, color, and balance that exudes from each and every individual work in The Un-Collection. Meet Barot, and his undeniably original collection of art, and be forever enchanted.",
           "title": "The Un-Collection"
@@ -101,20 +101,20 @@
   ],
   "concerts": [
     {
-      "bio": "Barot has just finished his final year at The Royal Academy of Painting and Sculpture, where he excelled in glass etching paintings and portraiture. Hailed as one of the most diverse concerts of his generation, Barot is equally as skilled with watercolors as he is with oils, and is just as well-balanced in different subject areas. Barot's collection entitled 'The Un-Collection' will adorn the walls of Gilbert Hall, depicting his range of skills and sensibilities - all of them, uniquely Barot, yet undeniably different",
-      "shortname": "Barot_Bellingham",
-      "name": "Barot Bellingham",
-      "reknown": "Royal Academy of Painting and Sculpture"
+      "bio": "March 18-19, 2017 the 12th Annual Jazz in the Gardens at the New Miami Stadium formerly called Sun Life Stadium! Opening Night Party March 17, 2017. More information will be announced soon! Stay tuned!",
+      "shortname": "jitg17",
+      "name": "Jazz in the Gardens",
+      "reknown": "New Miami Stadium Music Festival"
     },{
-      "bio": "The Artist to Watch in 2012 by the London Review, Johnathan has already sold one of the highest priced-commissions paid to an art student, ever on record. The piece, entitled Gratitude Resort, a work in oil and mixed media, was sold for $750,000 and Jonathan donated all the proceeds to Art for Peace, an organization that provides college art scholarships for creative children in developing nations",
-      "shortname": "Jonathan_Ferrar",
-      "name": "Jonathan G. Ferrar II",
-      "reknown": "Artist to Watch in 2012"
+      "bio": "A master of both the mic and the stage, Drake has proven himself to be one of the top live performers of his generation, and fans never tire of seeing this Toronto native rap his biggest hits on stage. One of the most successful hip-hop stars in the world, Drake launched his music career in 2006 with the release of his first mixtape, “Room for Improvement.” Since that debut, Drake has carved out a prominent place for himself in today’s rap scene, thanks in part to Platinum singles like “Headlines,” “Hold On, We’re Going Home,” and “0 to 100/The Catch Up.” Buy Drake tickets today and see the Toronto native perform a hit-filled setlist that spans the full length of his high-profile career. With a seemingly never-ending output of new material, Drake never fails to make each show different from the last. Whether you’re looking to attend the latest Drake tour or want to see him at a special event, like OVO Fest, Vivid Seats has you covered.",
+      "shortname": "Drake_Future",
+      "name": "Drake & Future",
+      "reknown": "Summer Sixteen Tour"
     },{
       "bio": "Hillary is a sophomore art sculpture student at New York University, and has already won all the major international prizes for new sculptors, including the Divinity Circle, the International Sculptor's Medal, and the Academy of Paris Award. Hillary's CAC exhibit features 25 abstract watercolor paintings that contain only water images including waves, deep sea, and river.",
-      "shortname": "Hillary_Goldwynn",
-      "name": "Hillary Hewitt Goldwynn-Post",
-      "reknown": "New York University"
+      "shortname": "garth_brooks",
+      "name": "Garth Brooks with Trisha Yearwood",
+      "reknown": "Warehouse District of Downtown Minneapolis"
     },{
       "bio": "The Art College in New Dehli has sponsored Hassum on scholarship for his entire undergraduate career at the university, seeing great promise in his contemporary paintings of landscapes - that use equal parts muted and vibrant tones, and are almost a contradiction in art. Hassum will be speaking on 'The use and absence of color in modern art' during Thursday's agenda.",
       "shortname": "Hassum_Harrod",
@@ -122,14 +122,14 @@
       "reknown": "Art College in New Dehli"
     },{
       "bio": "A native of New Orleans, much of Jennifer's work has centered around abstract images that depict flooding and rebuilding, having grown up as a teenager in the post-flood years. Despite the sadness of devastation and lives lost, Jennifer's work also depicts the hope and togetherness of a community that has persevered. Jennifer's exhibit will be discussed during Tuesday's Water in Art theme.",
-      "shortname": "Jennifer_Jerome",
-      "name": "Jennifer Jerome",
-      "reknown": "New Orleans, LA"
+      "shortname": "Freeman_Twins",
+      "name": "Freeman Twins",
+      "reknown": "G5ive  "
     },{
-      "bio": "LaVonne's giant-sized paintings all around Chicago tell the story of love, nature, and conservation - themes that are central to her heart. LaVonne will share her love and skill of graffiti art on Monday's schedule, as she starts the painting of a 20-foot high wall in the Rousseau Room of Hotel Contempo in front of a standing-room only audience in Art in Unexpected Places.",
-      "shortname": "LaVonne_LaRue",
-      "name": "LaVonne L. LaRue",
-      "reknown": "Chicago, IL"
+      "bio": "The Annual “No Sleep Super Bowl Celebrity Weekend” is the only event you’ll ever need to attend if you want non-stop Super Bowl after-party action! With this 99-hour event, sleeping is NOT an option and with the wide variety of entertainment, who would want to? Take your pick from yacht parties, speed dating, talent competitions, and even lingerie parties! Best of all, only ONE pass is for access to ALL the events! Wherever the Super Bowl is, the “No Sleep Super Bowl Celebrity Weekend” will be there with multiple venues and late night themed rendezvous ensuring a weekend of never-ending entertainment and fun. From the lodging to after-hour parties, the “No Sleep Super Bowl Celebrity Weekend” will ensure all the tedious details of traveling are taken care of, so you can concentrate on what you really want do…party! With celebrities such as Young Jeezy, Ludacris, Terrell Owens and players from the Miami Dolphins expected to attend, the “No Sleep Super Bowl Celebrity Weekend” is a weekend unlike any other!",
+      "shortname": "Young_Jeezy",
+      "name": "Young Jeezy",
+      "reknown": "Miami Beach, FL"
     },{
       "bio": "Constance received the Fullerton-Brighton-Norwell Award for Modern Art for her mixed-media image of a tree of life, with jewel-adorned branches depicting the arms of humanity, and precious gemstone-decorated leaves representing the spouting buds of togetherness. The daughter of a New York jeweler, Constance has been salvaging the discarded remnants of her father's jewelry-making since she was five years old, and won the New York State Fair grand prize at the age of 8 years old for a gem-adorned painting of the Manhattan Bridge.",
       "shortname": "Constance_Smith",
