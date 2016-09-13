@@ -5,7 +5,7 @@ angular.module('theplugsview')
   $scope.currentUser = currentAuth;
 
   $http.get('js/data.json').success(function(data) {
-    // console.log(data);
+    console.log(data);
       $scope.concerts = data.concerts;
       $scope.whichconcert = $state.params.cId;
       $scope.data = {
