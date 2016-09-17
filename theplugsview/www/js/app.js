@@ -3,6 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'theplugsview' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
+theplugsview =
 angular.module('theplugsview', ['ionic', 'firebase'])
 
 .run(function($ionicPlatform, $rootScope, $state) {
@@ -40,7 +41,10 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     databaseURL: "https://the-plugs-view.firebaseio.com",
     storageBucket: "the-plugs-view.appspot.com",
   };
+  //INITIALIZE FIREBASE WEB APP
   firebase.initializeApp(config);
+  var database = firebase.database();
+  var auth = firebase.auth();
 
   $stateProvider
     .state('tabs', {
@@ -48,12 +52,27 @@ angular.module('theplugsview', ['ionic', 'firebase'])
       abstract: true,
       templateUrl: 'views/templates/tabs.html'
   })
-  // Features home tab state route
+  // home tab route
   .state('tabs.home', {
     url: '/home',
     views: {
       'home-tab' : {
-        templateUrl: 'views/featuredView.html',
+        templateUrl: 'views/home-view.html',
+        // controller: 'FeaturedController',
+        resolve: {
+          "currentAuth": ["Auth", function(Auth) {
+            return Auth.$requireSignIn();
+          }]
+        }
+      }
+    }
+  })
+  // Features home tab state route
+  .state('tabs.features', {
+    url: '/features',
+    views: {
+      'features-tab' : {
+        templateUrl: 'views/featured-view.html',
         controller: 'FeaturedController',
         resolve: {
           "currentAuth": ["Auth", function(Auth) {
@@ -64,10 +83,10 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     }
   })
   // Features Details home tab state route
-  .state('tabs.home-detailsFeatures', {
-    url: '/home/:cId',
+  .state('tabs.features-details', {
+    url: '/features/:cId',
     views: {
-      'home-tab' : {
+      'features-tab' : {
         templateUrl: 'views/templates/detail.html',
         controller: 'FeaturedController',
         resolve: {
@@ -83,7 +102,7 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     url: '/concerts',
     views: {
       'concerts-tab' : {
-        templateUrl: 'views/concertView.html',
+        templateUrl: 'views/concert-view.html',
         controller: 'ConcertsController',
         resolve: {
           "currentAuth": ["Auth", function(Auth) {
@@ -93,6 +112,7 @@ angular.module('theplugsview', ['ionic', 'firebase'])
       }
     }
   })
+  // concerts detail tab
   .state('tabs.concerts-details', {
     url: '/concerts/:cId',
     views: {
@@ -111,15 +131,15 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     url: '/calendar',
     views: {
       'calendar-tab': {
-        templateUrl: 'views/favoriteView.html',
+        templateUrl: 'views/calendar-view.html',
         controller: 'FavoritesController'
       }
     }
   })
   .state('landing', {
     url: '/landing',
-    templateUrl: 'views/signIn.html',
+    templateUrl: 'views/templates/sign-in.html',
     controller: 'SignInController'
   })
-$urlRouterProvider.otherwise('/tab/home');
+$urlRouterProvider.otherwise('/tab/features');
 })
