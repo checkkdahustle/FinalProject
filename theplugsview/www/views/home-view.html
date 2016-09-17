@@ -1,4 +1,17 @@
 <ion-view view-title="Home">
+
+	<ion-nav-buttons side="secondary">
+		<ul>
+			<li>
+				<h6 class="displayName"> {{currentUser.displayName}}
+				</h6>
+				<ul class="dropdown">
+					<li ng-click="authObj.$signOut()"><a href="#">Log out</a></li>
+				</ul>
+			</li>
+		</ul>
+		<img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="profile photo" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
+	</ion-nav-buttons>
   <ion-content>
 
 <!-- Landing page Flyer Image  -->
