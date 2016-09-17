@@ -1,25 +1,27 @@
 theplugsview
-.controller('FavoritesController', ['$scope', '$http', '$state', function($scope, $http, $state) {
-  console.log("Favorite - Calendar View")
+.controller('FavoritesController', [
+  '$scope',
+  '$http',
+  '$state', function($scope, $http, $state) {
 
-  $http.get('js/data.json').success(function(data) {
-    // console.log(data);
+    // retrive calendar data from json file.
+    $http.get('js/data.json').success(function(data) {
+      // Set all calendar info in a variable.
       $scope.calendar = data.calendar;
-
+      // Delete item from calendar list.
       $scope.onItemDelete = function(dayIndex, item) {
         $scope.calendar[dayIndex].schedule.splice($scope.calendar[dayIndex].schedule.indexOf(item), 1);
       }
-
+      // on refresh pull down, retrive calendar data.
       $scope.doRefresh = function() {
       $http.get('js/data.json').success(function(data) {
           $scope.calendar = data.calendar;
           $scope.$broadcast('scroll.refreshComplete');
         });
       }
-
+      // toggle selected list to show star an item.
       $scope.toggleStar = function(item) {
         item.star = !item.star;
       }
-
   });
 }]);
