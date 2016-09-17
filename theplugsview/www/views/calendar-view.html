@@ -1,6 +1,18 @@
 <ion-view view-title=" Calendar">
   <ion-nav-bar class="bar-calm">
   </ion-nav-bar>
+  <ion-nav-buttons side="secondary">
+    <ul>
+      <li>
+        <h6 class="displayName"> {{currentUser.displayName}}
+        </h6>
+        <ul class="dropdown">
+          <li ng-click="authObj.$signOut()"><a href="#">Log out</a></li>
+        </ul>
+      </li>
+    </ul>
+    <img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="profile photo" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
+  </ion-nav-buttons>
 
   <div class="bar bar-subheader
   item-input-inset bar-light">
