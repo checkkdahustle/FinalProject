@@ -16,14 +16,13 @@ theplugsview
     });
   }
 
-
   // Auth State Change - User signed in and out.
   Auth.$onAuthStateChanged(function(user) {
     if(user){
       $rootScope.currentUser = user;
       // redirect to featured home page after logged in.
       console.log('signed in', user)
-      $state.go("tabs.home")
+      $state.go("tabs.features")
       // result is suppose to push into database but doesn't
       var userRef = firebase.database().ref('users/uid').push();
       return userRef;
