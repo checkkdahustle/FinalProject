@@ -3,9 +3,7 @@ theplugsview
 	'$scope',
 	'$http',
 	'$state',
-	'$firebaseArray',
-	'currentAuth',
-	'Auth', function($scope, $http, $state, $firebaseArray, currentAuth, Auth) {
+	 function($scope, $http, $state) {
 
 	// retrive concert data from json file.
 	// Set all concerts info & each concert in a variable.
