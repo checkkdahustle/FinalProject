@@ -1,4 +1,4 @@
-<ion-view view-title="Features" class="bar-assertive">
+<ion-view view-title="Features">
 
   <ion-nav-buttons side="primary">
 <!-- admin user can only view  Delete button -->
@@ -49,7 +49,7 @@
       <ion-item ng-class="{'star': item.star}"
       ng-repeat='item in concerts | filter: query'
       class="item-thumbnail-left item-icon-right
-        item-text-wrap" href="#/tab/home/{{item.shortname}}">
+        item-text-wrap" href="#/tab/features/{{item.shortname}}">
         <img ng-src="img/{{item.shortname}}_tn.jpg"
           alt="{{ item.name }} Photo">
         <h2>{{item.name}}</h2>
