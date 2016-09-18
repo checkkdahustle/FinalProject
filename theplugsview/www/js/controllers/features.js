@@ -5,6 +5,8 @@ theplugsview
 	'$state',
 	 function($scope, $http, $state) {
 
+	$scope.logo = "<img class='logo' src='img/logo.png' />"
+
 	// retrive concert data from json file.
 	// Set all concerts info & each concert in a variable.
 	// hide delete and reorder button, for Admins only.
