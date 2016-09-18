@@ -14,14 +14,14 @@
 <ion-nav-buttons side="secondary">
     <ul>
       <li>
-        <h6 class="displayName"> {{currentUser.displayName}}
-        </h6>
+        <h6 class="displayName"> {{currentUser.displayName}}</h6>
+        <img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="profile photo" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
         <ul class="dropdown">
-          <li ng-click="authObj.$signOut()"><a href="#">Log out</a></li>
+          <li ng-click="authObj.$signOut()"><a href="#">Logout</a></li>
         </ul>
       </li>
     </ul>
-    <img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="profile photo" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
+
 
 
 <!-- admin user can only view Reoreder button -->
