@@ -83,17 +83,20 @@ pre {
   max-width: 100%;
 }
 
-/*Profile Photo - featuredView.html */
+/* Profile Photo - Views */
 .profile-img {
   position: fixed;
   right: 0px;
   bottom: 0px;
-  /*width: 35%;*/
   height: 45px;
-  /*border-radius: 50px;*/
-  /*box-shadow: 3px 3px 3px #000;*/
-  /*margin-right: 10px;*/
-  /*float: right;*/
+}
+
+/* displayName - Views */
+.displayName{
+  position: fixed;
+  right: 53px;
+  bottom: 3px;
+  color: #444444;
 }
 
 /* facebook buttion - signIn.html */
@@ -106,12 +109,6 @@ pre {
 .flyerbeta{
   max-width: 100%;
   /*margin: 0 auto;*/
-}
-
-/*facebook display name - featuredView and concertView */
-.displayName{
-  max-width: 110px;
-  color: #fff;
 }
 
 /* Log out Drop down - featuredView and concertView */
