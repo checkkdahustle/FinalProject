@@ -25,7 +25,7 @@
 
 <!-- admin user can only view Reoreder button -->
     <button ng-show="currentUser.type == 'admin'"
-      class="button button-icon ion-navicon"
+      class="button button-icon ion-navicon-round"
       ng-click="data.showReorder = !data.showReorder; data.showDelete = false;">
     </button>
   </ion-nav-buttons>
@@ -35,7 +35,10 @@
     item-input-inset bar-light">
     <label class="item-input-wrapper">
       <i class="icon ion-search placeholder-icon"></i>
-      <input type="search" ng-model="query" placeholder="Search">
+      <input type="text" ng-model="query" placeholder="Search">
+      <!-- clear search  -->
+      <button ng-click="clearSearch()" class="button ion-ios-close button-clear button-stable" ng-show="query.length">
+      </button>
     </label>
   </div>
 
