@@ -1,5 +1,5 @@
 theplugsview
-.controller('FavoritesController', [
+.controller('CalendarController', [
   '$scope',
   '$http',
   '$state', function($scope, $http, $state) {
