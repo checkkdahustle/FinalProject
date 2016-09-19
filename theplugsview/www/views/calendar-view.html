@@ -17,12 +17,15 @@
 
 <!-- Search bar filtering through concert list  -->
   <div class="bar bar-subheader
-  item-input-inset bar-light">
-  <label class="item-input-wrapper">
-    <i class="icon ion-search placeholder-icon"></i>
-    <input id="search" type="search" ng-model="query" placeholder="Search">
-  </label>
-</div>
+    item-input-inset bar-light">
+    <label class="item-input-wrapper">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="text" ng-model="query" placeholder="Search">
+      <!-- clear search  -->
+      <button ng-click="clearSearch()" class="button ion-ios-close button-clear button-stable" ng-show="query.length">
+      </button>
+    </label>
+  </div>
 
 <!-- Calendar View of starred concerts list -->
   <ion-content class="has-subheader">
