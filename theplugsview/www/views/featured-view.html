@@ -56,10 +56,10 @@
         item-text-wrap" href="#/tab/features/{{item.shortname}}">
         <img ng-src="img/{{item.shortname}}_tn.jpg"
           alt="{{ item.name }} Photo">
-        <h2>{{item.name}}</h2>
         <h3>{{item.reknown}}</h3>
+        <h2>{{item.name}}</h2>
         <p>{{item.bio | limitTo: 100}}
-        {{ item.bio.length > 150 ? '&hellip;' : '' }}</p>
+        {{ item.bio.length > 150 ? '&hellip;' : '' }} read more</p>
         <button class="button button-clear icon ion-star button-assertive"
           ng-click="toggleStar(item)"
           ng-show="item.star"></button>
