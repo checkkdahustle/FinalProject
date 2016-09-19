@@ -7,7 +7,7 @@
       "schedule": [
         {
           "time": "9:30-10:30am",
-          "shortname": "GRIOT_FEST",
+          "shortname": "griot_fest",
           "artist": "LaVonne L. LaRue",
           "room": "Elizabeth Hall",
           "description": "Watch LaVonne L. LaRue, a Chicago graffiti artist share her love and skill of mural art on Monday's schedule, as she starts the painting of a 20-foot high wall in the Rousseau Room of Hotel Contempo, which will be finished at the end of the conference. Make sure to show up a bit early, as this session will be standing-room only.",
@@ -73,6 +73,84 @@
       ]
     }, {
       "weekday": "Thursday",
+      "schedule": [
+        {
+          "time": "09:30 to 10:30 am",
+          "shortname": "Hassum_Harrod",
+          "artist": "Hassum Harrod",
+          "room": "Elizabeth Hall",
+          "description": "Hassum's inherent ability to create color palettes that illuminate an image and allure an audience, has drawn praise from traditionalists as well as modern concerts - no small feat in today's diverse art world. His master's thesis at San Francisco Art Academy is entitled \"Color Upon Color â€“ The Mixing and Reinventing of Color.\" It is this thesis that prompted Hillford & Bilken to publish his solo-authored book on color, that will be used in undergraduate art programs throughout the world starting next year.",
+          "title": "The Use and Absence of Color in Modern Art"
+        },{
+          "time": "10:30 to 11:30 am",
+          "shortname": "Constance_Smith",
+          "artist": "Constance Olivia Smith",
+          "room": "Victoria Hall",
+          "description": "In the Art of Salvaging, Olivia will share her talent for finding and selecting scrap materials, as well as the philosophy behind several of her more celebrated works of art. If you're interested in recycling and mixed media, this session will include a lively discussion of both, from the woman who Art International Digest calls the \"foremost queen of scrap art.\"",
+          "title": "The Art of Salvaging"
+        },{
+          "time": "1:30 to 2:30",
+          "shortname": "Riley_Rewington",
+          "artist": "Riley Rudolph Rewington",
+          "room": "Dennison Hall",
+          "description": "The leader of the MMA artistic movement in his hometown of Portland, Riley Rudolph Rewington draws a crowd wherever he goes. Mixing street performance, video, music, and traditional art, Riley has created some of the most unique and deeply poignant abstract works of his generation. Join Riley in Dennison Hall for an intimate discussion on The Art of Abstract, in which he shares his philosophies about modern abstract art, and critiques some of this own work â€“ with complete candor and a healthy dose of personality.",
+          "title": "The Art of Abstract"
+        }
+      ]
+    }, {
+      "weekday": "Friday",
+      "schedule": [
+        {
+          "time": "09:30 to 10:30 am",
+          "shortname": "Hassum_Harrod",
+          "artist": "Hassum Harrod",
+          "room": "Elizabeth Hall",
+          "description": "Hassum's inherent ability to create color palettes that illuminate an image and allure an audience, has drawn praise from traditionalists as well as modern concerts - no small feat in today's diverse art world. His master's thesis at San Francisco Art Academy is entitled \"Color Upon Color â€“ The Mixing and Reinventing of Color.\" It is this thesis that prompted Hillford & Bilken to publish his solo-authored book on color, that will be used in undergraduate art programs throughout the world starting next year.",
+          "title": "The Use and Absence of Color in Modern Art"
+        },{
+          "time": "10:30 to 11:30 am",
+          "shortname": "Constance_Smith",
+          "artist": "Constance Olivia Smith",
+          "room": "Victoria Hall",
+          "description": "In the Art of Salvaging, Olivia will share her talent for finding and selecting scrap materials, as well as the philosophy behind several of her more celebrated works of art. If you're interested in recycling and mixed media, this session will include a lively discussion of both, from the woman who Art International Digest calls the \"foremost queen of scrap art.\"",
+          "title": "The Art of Salvaging"
+        },{
+          "time": "1:30 to 2:30",
+          "shortname": "Riley_Rewington",
+          "artist": "Riley Rudolph Rewington",
+          "room": "Dennison Hall",
+          "description": "The leader of the MMA artistic movement in his hometown of Portland, Riley Rudolph Rewington draws a crowd wherever he goes. Mixing street performance, video, music, and traditional art, Riley has created some of the most unique and deeply poignant abstract works of his generation. Join Riley in Dennison Hall for an intimate discussion on The Art of Abstract, in which he shares his philosophies about modern abstract art, and critiques some of this own work â€“ with complete candor and a healthy dose of personality.",
+          "title": "The Art of Abstract"
+        }
+      ]
+    }, {
+      "weekday": "Saturday",
+      "schedule": [
+        {
+          "time": "09:30 to 10:30 am",
+          "shortname": "Hassum_Harrod",
+          "artist": "Hassum Harrod",
+          "room": "Elizabeth Hall",
+          "description": "Hassum's inherent ability to create color palettes that illuminate an image and allure an audience, has drawn praise from traditionalists as well as modern concerts - no small feat in today's diverse art world. His master's thesis at San Francisco Art Academy is entitled \"Color Upon Color â€“ The Mixing and Reinventing of Color.\" It is this thesis that prompted Hillford & Bilken to publish his solo-authored book on color, that will be used in undergraduate art programs throughout the world starting next year.",
+          "title": "The Use and Absence of Color in Modern Art"
+        },{
+          "time": "10:30 to 11:30 am",
+          "shortname": "Constance_Smith",
+          "artist": "Constance Olivia Smith",
+          "room": "Victoria Hall",
+          "description": "In the Art of Salvaging, Olivia will share her talent for finding and selecting scrap materials, as well as the philosophy behind several of her more celebrated works of art. If you're interested in recycling and mixed media, this session will include a lively discussion of both, from the woman who Art International Digest calls the \"foremost queen of scrap art.\"",
+          "title": "The Art of Salvaging"
+        },{
+          "time": "1:30 to 2:30",
+          "shortname": "Riley_Rewington",
+          "artist": "Riley Rudolph Rewington",
+          "room": "Dennison Hall",
+          "description": "The leader of the MMA artistic movement in his hometown of Portland, Riley Rudolph Rewington draws a crowd wherever he goes. Mixing street performance, video, music, and traditional art, Riley has created some of the most unique and deeply poignant abstract works of his generation. Join Riley in Dennison Hall for an intimate discussion on The Art of Abstract, in which he shares his philosophies about modern abstract art, and critiques some of this own work â€“ with complete candor and a healthy dose of personality.",
+          "title": "The Art of Abstract"
+        }
+      ]
+    }, {
+      "weekday": "Sunday",
       "schedule": [
         {
           "time": "09:30 to 10:30 am",
