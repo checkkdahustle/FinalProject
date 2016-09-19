@@ -12,7 +12,7 @@ theplugsview
    	};
 
      // retrive concert data from json file.
-     $http.get('js/data/concert.json').success(function(data) {
+     $http.get('js/data/concerts.json').success(function(data) {
       // Set all concerts info & each concert in a variable.
       $scope.concerts = data.concerts;
       // hide delete and reorder button, for Admins only.
@@ -27,7 +27,7 @@ theplugsview
       }
       // on refresh pull down, retrive concert data.
       $scope.doRefresh =function() {
-      $http.get('js/data.json').success(function(data) {
+      $http.get('js/data/concerts.json').success(function(data) {
           $scope.concerts = data.concerts;
           $scope.$broadcast('scroll.refreshComplete');
         });
