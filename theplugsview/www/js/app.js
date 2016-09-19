@@ -132,7 +132,7 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     views: {
       'calendar-tab': {
         templateUrl: 'views/calendar-view.html',
-        controller: 'FavoritesController',
+        controller: 'CalendarController',
         resolve: {
           "currentAuth": ["Auth", function(Auth) {
             return Auth.$requireSignIn();
