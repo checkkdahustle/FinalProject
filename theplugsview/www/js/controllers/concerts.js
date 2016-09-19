@@ -5,8 +5,14 @@ theplugsview
   '$state' ,
    function($scope, $http, $state) {
 
+    $scope.logo = "<img class='logo' src='img/logo.png' />";
+
+   	$scope.clearSearch = function() {
+    		$scope.query = '';
+   	};
+
      // retrive concert data from json file.
-     $http.get('js/data.json').success(function(data) {
+     $http.get('js/data/concert.json').success(function(data) {
       // Set all concerts info & each concert in a variable.
       $scope.concerts = data.concerts;
       // hide delete and reorder button, for Admins only.
