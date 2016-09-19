@@ -5,7 +5,7 @@ theplugsview
   '$state', function($scope, $http, $state) {
 
     // retrive calendar data from json file.
-    $http.get('js/data.json').success(function(data) {
+    $http.get('js/data/concerts.json').success(function(data) {
       // Set all calendar info in a variable.
       $scope.calendar = data.calendar;
       // Delete item from calendar list.
