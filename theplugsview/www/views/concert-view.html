@@ -55,8 +55,8 @@
         item-text-wrap" href="#/tab/concerts/{{item.shortname}}">
         <img ng-src="img/{{item.shortname}}_tn.jpg"
           alt="{{ item.name }} Photo">
-        <h2>{{item.name}}</h2>
         <h3>{{item.reknown}}</h3>
+        <h2>{{item.name}}</h2>
         <p>{{item.bio | limitTo: 100}}
         {{ item.bio.length > 150 ? '&hellip;' : '' }}</p>
         <!-- Star toggle  button on each list item -->
