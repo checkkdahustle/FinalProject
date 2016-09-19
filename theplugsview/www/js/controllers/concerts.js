@@ -41,5 +41,13 @@ theplugsview
         $scope.concerts.splice(fromIndex, 1);
         $scope.concerts.splice(toIndex, 0, item);
       };
-  });
+  }).error(function(error) {
+  	$rootScope.broadcast('http-error', { error: 'error'})
+  })
 }]);
+
+$rootScope.$on('http-error', function handler(obj) {
+    //handle error
+    console.log("error:", obj)
+
+ });

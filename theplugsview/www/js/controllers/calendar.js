@@ -23,5 +23,13 @@ theplugsview
       $scope.toggleStar = function(item) {
         item.star = !item.star;
       }
-  });
+  }).error(function(error) {
+  	$rootScope.broadcast('http-error', { error: 'error'})
+  })
 }]);
+
+$rootScope.$on('http-error', function handler(obj) {
+    //handle error
+    console.log("error:", obj)
+
+ });
