@@ -14,7 +14,7 @@ theplugsview
       }
       // on refresh pull down, retrive calendar data.
       $scope.doRefresh = function() {
-      $http.get('js/data.json').success(function(data) {
+      $http.get('js/data/concerts.json').success(function(data) {
           $scope.calendar = data.calendar;
           $scope.$broadcast('scroll.refreshComplete');
         });
