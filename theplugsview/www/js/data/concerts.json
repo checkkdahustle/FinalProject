@@ -48,56 +48,10 @@
       ]
     }, {
       "weekday": "Friday",
-      "schedule": [
-        {
-          "time": "09:30 to 10:30 am",
-          "shortname": "Hassum_Harrod",
-          "artist": "Hassum Harrod",
-          "room": "Elizabeth Hall",
-          "description": "Hassum's inherent ability to create color palettes that illuminate an image and allure an audience, has drawn praise from traditionalists as well as modern concerts - no small feat in today's diverse art world. His master's thesis at San Francisco Art Academy is entitled \"Color Upon Color â€“ The Mixing and Reinventing of Color.\" It is this thesis that prompted Hillford & Bilken to publish his solo-authored book on color, that will be used in undergraduate art programs throughout the world starting next year.",
-          "title": "The Use and Absence of Color in Modern Art"
-        },{
-          "time": "10:30 to 11:30 am",
-          "shortname": "toydrive_concert",
-          "artist": "Constance Olivia Smith",
-          "room": "Victoria Hall",
-          "description": "In the Art of Salvaging, Olivia will share her talent for finding and selecting scrap materials, as well as the philosophy behind several of her more celebrated works of art. If you're interested in recycling and mixed media, this session will include a lively discussion of both, from the woman who Art International Digest calls the \"foremost queen of scrap art.\"",
-          "title": "The Art of Salvaging"
-        },{
-          "time": "1:30 to 2:30",
-          "shortname": "Riley_Rewington",
-          "artist": "Riley Rudolph Rewington",
-          "room": "Dennison Hall",
-          "description": "The leader of the MMA artistic movement in his hometown of Portland, Riley Rudolph Rewington draws a crowd wherever he goes. Mixing street performance, video, music, and traditional art, Riley has created some of the most unique and deeply poignant abstract works of his generation. Join Riley in Dennison Hall for an intimate discussion on The Art of Abstract, in which he shares his philosophies about modern abstract art, and critiques some of this own work â€“ with complete candor and a healthy dose of personality.",
-          "title": "The Art of Abstract"
-        }
-      ]
+      "schedule": []
     }, {
       "weekday": "Saturday",
-      "schedule": [
-        {
-          "time": "09:30 to 10:30 am",
-          "shortname": "Hassum_Harrod",
-          "artist": "Hassum Harrod",
-          "room": "Elizabeth Hall",
-          "description": "Hassum's inherent ability to create color palettes that illuminate an image and allure an audience, has drawn praise from traditionalists as well as modern concerts - no small feat in today's diverse art world. His master's thesis at San Francisco Art Academy is entitled \"Color Upon Color â€“ The Mixing and Reinventing of Color.\" It is this thesis that prompted Hillford & Bilken to publish his solo-authored book on color, that will be used in undergraduate art programs throughout the world starting next year.",
-          "title": "The Use and Absence of Color in Modern Art"
-        },{
-          "time": "10:30 to 11:30 am",
-          "shortname": "toydrive_concert",
-          "artist": "Constance Olivia Smith",
-          "room": "Victoria Hall",
-          "description": "In the Art of Salvaging, Olivia will share her talent for finding and selecting scrap materials, as well as the philosophy behind several of her more celebrated works of art. If you're interested in recycling and mixed media, this session will include a lively discussion of both, from the woman who Art International Digest calls the \"foremost queen of scrap art.\"",
-          "title": "The Art of Salvaging"
-        },{
-          "time": "1:30 to 2:30",
-          "shortname": "Riley_Rewington",
-          "artist": "Riley Rudolph Rewington",
-          "room": "Dennison Hall",
-          "description": "The leader of the MMA artistic movement in his hometown of Portland, Riley Rudolph Rewington draws a crowd wherever he goes. Mixing street performance, video, music, and traditional art, Riley has created some of the most unique and deeply poignant abstract works of his generation. Join Riley in Dennison Hall for an intimate discussion on The Art of Abstract, in which he shares his philosophies about modern abstract art, and critiques some of this own work â€“ with complete candor and a healthy dose of personality.",
-          "title": "The Art of Abstract"
-        }
-      ]
+      "schedule": []
     }, {
       "weekday": "Sunday",
       "schedule": []
@@ -120,15 +74,15 @@
       "name": "Mark Evans Jr.",
       "reknown": "Orlando Vapor Show Expo"
     },{
-      "bio": "A first-year student at the Roux Academy of Art, Media, and Design, Riley is already changing the face of modern art at the university. Riley's exquisite abstract pieces have no intention of ever being understood, but instead beg the viewer to dream, create, pretend, and envision with their mind's eye. Riley will be speaking on the 'Art of Abstract' during Thursday's schedule",
-      "shortname": "Riley_Rewington",
-      "name": "Riley Rudolph Rewington",
-      "reknown": "Roux Academy of Art, Media, and Design"
+      "bio": "International icon, five-time Grammy Award-nominee, and multi-platinum selling artist/songwriter/hitmakerSia today announced her North American Nostalgic For The Present Tour, her first-ever arena tour and return to the road in five years. The 22-city tour, produced by Live Nation, kicks off on Thursday, September 29 in Seattle, WA with special guests Miguel and AlunaGeorge. Sia plays Orlando's Amway Center on Sunday, October 30. Tickets go on sale to the general public on Friday, May 20 at 10 a.m. ",
+      "shortname": "Sia",
+      "name": "SIA & special guest Miguel / Aluna George",
+      "reknown": "SIA Tour"
     },{
-      "bio": "A senior at the China International Art University, Xhou has become well-known for his miniature sculptures, often the size of a rice granule, that are displayed by rear projection of microscope images on canvas. Xhou will discuss the art and science behind his incredibly detailed works of art.",
-      "shortname": "Xhou_Ta",
-      "name": "Xhou Ta",
-      "reknown": "China International Art University"
+      "bio": "Pop star Ariana Grande has always been known for her signature high ponytail, winged eyeliner, and mini-dresses, that she has unofficially become the poster child for coy cuteness, reports Vogue. All right, Arianators, it’s time to get excited, because Ariana Grande has officially announced her biggest tour ever in support of her latest album, Dangerous Woman. And though there were a few delays when it came to planning, this is going to be well worth the wait.",
+      "shortname": "ariana_grande",
+      "name": "Ariana Grande",
+      "reknown": "Dangerous Woman Tour"
     }
   ]
 }
