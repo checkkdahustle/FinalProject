@@ -1,5 +1,6 @@
 <ion-view view-title="Home">
 
+<!-- Display currentUser name and photo from facebook -->
 	<ion-nav-buttons side="secondary">
 		<ul>
 			<li>
@@ -10,7 +11,7 @@
 				</ul>
 			</li>
 		</ul>
-		<img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="profile photo" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"/>
+		<img class="profile-img" ng-src="{{currentUser.photoURL}}" alt="profile photo" />
 	</ion-nav-buttons>
   <ion-content>
 
