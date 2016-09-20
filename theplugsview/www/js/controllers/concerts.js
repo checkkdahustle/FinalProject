@@ -2,8 +2,9 @@ theplugsview
 .controller('ConcertsController', [
   '$scope',
   '$http',
-  '$state' ,
-   function($scope, $http, $state) {
+  '$state',
+  '$rootScope',
+   function($scope, $http, $state, $rootScope) {
 
     $scope.logo = "<img class='logo' src='img/logo.png' />";
 
@@ -48,6 +49,6 @@ theplugsview
 
 $rootScope.$on('http-error', function handler(obj) {
     //handle error
-    console.log("error:", obj)
+    $rootScope.error = console.log("error:", obj)
 
  });
