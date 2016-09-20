@@ -58,7 +58,7 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     views: {
       'home-tab' : {
         templateUrl: 'views/home-view.html',
-        // controller: 'FeaturedController',
+        controller: 'ConcertsController',
         resolve: {
           "currentAuth": ["Auth", function(Auth) {
             return Auth.$requireSignIn();
