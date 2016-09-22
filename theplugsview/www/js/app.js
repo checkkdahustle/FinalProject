@@ -58,7 +58,7 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     views: {
       'home-tab' : {
         templateUrl: 'views/home-view.html',
-        controller: 'ConcertsController',
+        controller: 'FeaturedController',
         resolve: {
           "currentAuth": ["Auth", function(Auth) {
             return Auth.$requireSignIn();
@@ -145,6 +145,10 @@ angular.module('theplugsview', ['ionic', 'firebase'])
     url: '/landing',
     templateUrl: 'views/templates/sign-in.html',
     controller: 'SignInController'
+  })
+  .state('adminform', {
+    url: '/adminform',
+    templateUrl: 'views/form-view.html',
   })
 $urlRouterProvider.otherwise('/tab/features');
 })

@@ -3,7 +3,13 @@ theplugsview
 	'$scope',
 	'$http',
 	'$state',
-	 function($scope, $http, $state) {
+	'$ionicSlideBoxDelegate',
+	 function($scope, $http, $state, $ionicSlideBoxDelegate) {
+
+  // Show slide on click- home-view
+	$scope.nextSlide = function() {
+    $ionicSlideBoxDelegate.next();
+  }
 
 	$scope.logo = "<img class='logo' src='img/logo.png' />";
 
@@ -11,9 +17,6 @@ theplugsview
  		$scope.query = '';
 	};
 
-	// retrive concert data from json file.
-	// Set all concerts info & each concert in a variable.
-	// hide delete and reorder button, for Admins only.
   $http.get('js/data/features.json').success(function(data) {
       $scope.concerts = data.concerts;
       $scope.whichconcert = $state.params.cId;

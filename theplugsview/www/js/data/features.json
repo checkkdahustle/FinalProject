@@ -129,6 +129,11 @@
       "shortname": "toydrive_concert",
       "name": "Feed Our Blocks Foundation",
       "reknown": "Toy Drive Christmas Giveaway Pinic Concert"
+    },{
+      "bio": "Be sure not to miss the next Ariana Grande concert when the budding starlet takes the stage in a city near you. Though she got her big break via Broadway and Nickelodeon, this multi-talented entertainer has since successfully transitioned into a full-fledged, chart-topping singer, making Ariana Grande tickets a popular item each and every time she heads out on tour.",
+      "shortname": "ariana_grande",
+      "name": "Ariana Grande",
+      "reknown": "Dangerous Woman Tour"
     }
   ]
 }

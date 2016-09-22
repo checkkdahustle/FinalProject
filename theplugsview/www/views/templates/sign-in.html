@@ -8,8 +8,165 @@
   </ion-nav-buttons>
   <ion-content>
 
-<!-- Landing page Flyer Image  -->
-    <img class="flyerbeta" src="../img/flyerbeta.png" alt="BetaFlyer" />
+
+    <ion-slide-box does-continue="true" auto-play="true">
+      <ion-slide>
+        <img class="flyerbeta" ng-click="nextSlide()" src="../img/img_drake_future_tn.jpg" alt="BetaFlyer" />
+      </ion-slide>
+      <ion-slide>
+        <img class="flyerbeta" ng-click="nextSlide()" src="img/img_chicago.jpg" />
+      </ion-slide>
+      <ion-slide>
+        <img class="flyerbeta" ng-click="nextSlide()" src="img/arianacopy.jpg" />
+      </ion-slide>
+      <ion-slide>
+        <img class="flyerbeta" ng-click="nextSlide()" src="img/img_griot_fest_tn.jpg" />
+      </ion-slide>
+
+    </ion-slide-box>
+
+    <ion-list>
+      <ion-item>
+      <!-- row1 -->
+      <h3>Concerts Coming-up</h3>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/marc_anthony.jpg">
+            <div class="caption">
+              <h3>Marc Anthony</h3>
+              <p style="color: red">Nov. 20th, 2016</p>
+              <p><span href="#" class="btn btn-primary" role="button">info</span> <span href="#" class="btn btn-default" role="button">Amway Center</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/sia-tour.jpg">
+            <div class="caption">
+              <h3>Sia: Nostalgic For The Present Tour</h3>
+              <p style="color: red">Oct. 30th, 2016</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">Amway Center</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/ariana.jpg">
+            <div class="caption">
+              <h3>Ariana Grande </h3>
+              <p style="color: red">April 17th, 2017</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">Amway Center</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/blankface.jpg">
+            <div class="caption">
+              <h3>SchoolBoy Q </h3>
+              <p style="color: red">Sep. 27th, 2016</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">Amway Center</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 2 -->
+      <h3>Trending Concert Tours</h3>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/lauryn-hill.jpg">
+            <div class="caption">
+              <h3>Lauryn Hill </h3>
+              <p style="color: red">Dec. 8th, 2016</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">House of Blues</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/1975.jpg">
+            <div class="caption">
+              <h3>The 1975 </h3>
+              <p style="color: red">Dec. 4th, 2016</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">Hard Rock Live</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/shawn-mendes.jpg">
+            <div class="caption">
+              <h3>Shawn Mendes </h3>
+              <p style="color: red">Jul. 28th, 2017</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">Amway Center</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/drake_future_tn.jpg">
+            <div class="caption">
+              <h3>Drake & Future</h3>
+              <p style="color: red">Jan. 2nd, 2017</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">Amway Center</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row3  -->
+      <h3>Just Announced</h3>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/charlie-puth.jpg">
+            <div class="caption">
+              <h3>Charlie Puth</h3>
+              <p style="color: red">Oct. 3rd, 2016</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">House of Blues</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/countrytour.jpg">
+            <div class="caption">
+              <h3>Cole Swindell</h3>
+              <p style="color: red">Nov. 18th, 2016</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">House of Blues</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/5fingers.jpg">
+            <div class="caption">
+              <h3>5 Finger Death Punch </h3>
+              <p style="color: red">Dec. 8th, 2016</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">Amway Center</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="hv" src="img/orchestra.jpg">
+            <div class="caption">
+              <h3>Trans-Siberian Orchestra </h3>
+              <p style="color: red">Dec. 8th, 2016</p>
+              <p><a href="#" class="btn btn-primary" role="button">info</a> <span href="#" class="btn btn-default" role="button">Amway Center</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </ion-item>
+  </ion-list>
 
   </ion-content>
 </ion-view>

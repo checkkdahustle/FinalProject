@@ -130,3 +130,145 @@ ul li ul.dropdown a{
   max-width: 100%;
   margin: 0 auto;
 }
+
+.mySlides {
+  display:none;
+}
+
+/*.home-content .home-section{
+  max-width:100%;
+}*/
+
+.w3-center{
+  text-align: center;
+}
+
+.w3-green{
+  max-width: 33.3%;
+  background-color: green;
+}
+.w3-dark-grey{
+  max-width: 33.3%;
+  background-color: grey;
+}
+.w3-red{
+  max-width: 33.3%;
+  background-color: red;
+}
+.col1{
+  float:left;
+  width:29.33%;
+  position:relative;
+  left:68.67%;
+  overflow:hidden;
+}
+.col2{
+  float:left;
+  width:29.33%;
+  position:relative;
+  left:72.67%;
+  overflow:hidden;
+}
+.col3{
+  float:left;
+	width:29.33%;
+	position:relative;
+	left:76.67%;
+	overflow:hidden;
+}
+.w3-container{
+  float:left;
+	width:100%;
+	position:relative;
+	right:33.33%;
+	background:#fff689; /* column 1 background colour */
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.row:before, .row:after{
+  display: table;
+  content: " ";
+}
+.row::after{
+  clear: both;
+}
+.col-sm-6, .col-md-4{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+
+.thumbnail > .hv,
+.thumbnail a > .hv{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+}
+.thumbnail > .hv,
+.thumbnail a > .hv {
+  margin-right: auto;
+  margin-left: auto;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #333;
+}
+.caption h3{
+  font-size: 12px;
+}
+
+@media (min-width: 768px){
+  .col-sm-6{
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px){
+  .col-md-4{
+    float: left;
+    width: 33.33333333%;
+  }
+}
